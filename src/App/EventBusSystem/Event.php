@@ -8,8 +8,6 @@ class Event
 
     private array $data = [];
 
-    private int $usedChecker = 0;
-
     const
         EVENTS_USED = 1;
 
@@ -38,17 +36,4 @@ class Event
         return $this->type;
     }
 
-    public function setUsedChecker(int $num): void
-    {
-        $this->usedChecker = $num;
-    }
-
-    public function getUsedChecker(): bool
-    {
-        if ($this->usedChecker === self::EVENTS_USED) {
-            return true;
-        } else {
-            return false;
-        }
-    }
 }
